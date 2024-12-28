@@ -1,0 +1,7 @@
+server:
+    port: 8080
+    severlet:
+        context-path: /api/integration
+api:
+    stripe:
+        key: sk_test_51Qaee8GKxIMZQeJhzc3d3Gk5XaSYZKE0rjVkwsrJVeiyybrL2uIJpQ8ZyHrE4SrlsiTIPXbLlL4e3ceDLh134hw900vsJHWaQd
