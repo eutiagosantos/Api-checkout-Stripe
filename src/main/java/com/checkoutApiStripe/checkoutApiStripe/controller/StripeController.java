@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.checkoutApiStripe.checkoutApiStripe.dto.StripeChargeDto;
+import com.checkoutApiStripe.checkoutApiStripe.dto.StripeSubscriptionDto;
+import com.checkoutApiStripe.checkoutApiStripe.dto.StripeSubscriptionResponse;
 import com.checkoutApiStripe.checkoutApiStripe.dto.StripeTokenDto;
 import com.checkoutApiStripe.checkoutApiStripe.service.StripeService;
 
@@ -34,5 +36,13 @@ public class StripeController {
 
         return stripeService.charge(model);
     }
+
+    @PostMapping("/createSubscription")
+    @ResponseBody
+    public StripeSubscriptionResponse subscription(@RequestBody StripeSubscriptionDto entity) {
+        
+        return stripeService.createSubscription(entity);
+    }
+    
 
 }
